@@ -20,27 +20,30 @@ function App() {
   return (
     <>
       {!menu ? (
-        <>
-        <nav>
-        <h3>Awesome Website</h3>
-        <Link to="/home" className='link'> Homepage</Link>
-        <Link to="/products" className='link'> Products</Link>
-        <div className='link cartLink'>
-          <Link to="/cart" className='link'> Cart{totalQuantity() > 0 ? ": " + totalQuantity() : ""}</Link>
-          <img src="/src/assets/cart-shopping-solid.svg" alt="cartIcon" className='icon'/>
-        </div>
-        <button className='mobile' onClick={() => setMenu(true)}> Menu </button>
-      </nav>
-      <div className='main'>
-      <Outlet context={[cart, setCart]}/>
-      </div>
-        </>
-      ) : (<div className='mobileMenu'>
-          <button onClick={() => setMenu(false)}>Close menu</button>
-          <Link to="/home" className='linkMobile' onClick={() => setMenu(false)}> Homepage</Link>
-          <Link to="/products" className='linkMobile' onClick={() => setMenu(false)}> Products</Link>
-          <Link to="/cart" className='linkMobile' onClick={() => setMenu(false)}> Cart{totalQuantity() > 0 ? ": " + totalQuantity() : ""}</Link>
-          </div>)}
+                <>
+                  <nav>
+                    <h3>Awesome Website</h3>
+                    <Link to="/home" className='link'> Homepage</Link>
+                    <Link to="/products" className='link'> Products</Link>
+                    <div className='link cartLink'>
+                      <Link to="/cart" className='link'> Cart{totalQuantity() > 0 ? ": " + totalQuantity() : ""}</Link>
+                      <img src="/src/assets/cart-shopping-solid.svg" alt="cartIcon" className='icon'/>
+                    </div>
+                    <button className='mobile' onClick={() => setMenu(true)}> Menu </button>
+                  </nav>
+                  <div className='main'>
+                    <Outlet context={[cart, setCart]}/>
+                  </div>
+                </>
+              ) : (
+                <div className='mobileMenu'>
+                  <button onClick={() => setMenu(false)}>Close menu</button>
+                  <Link to="/home" className='linkMobile' onClick={() => setMenu(false)}> Homepage</Link>
+                  <Link to="/products" className='linkMobile' onClick={() => setMenu(false)}> Products</Link>
+                  <Link to="/cart" className='linkMobile' onClick={() => setMenu(false)}> Cart{totalQuantity() > 0 ? ": " + totalQuantity() : ""}</Link>
+                </div>
+              )
+        }
       
       
     </>
