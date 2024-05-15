@@ -28,7 +28,8 @@ function App() {
                     <Link to="/products" className='link'> Products</Link>
                     <div className='link cartLink'>
                       <Link to="/cart" className='link'> Cart{totalQuantity() > 0 ? ": " + totalQuantity() : ""}</Link>
-                      <img src="/src/assets/cart-shopping-solid.svg" alt="cartIcon" className='icon'/>
+                      <img src="/src/assets/cart-shopping-solid.svg" alt="cartIcon" className='icon light'/>
+                      <img src="/src/assets/cart-shopping-solid-white.svg" alt="cartIcon" className='icon dark'/>
                     </div>
                     <button className='mobile' onClick={() => setMenu(true)}> Menu </button>
                   </nav>
