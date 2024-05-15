@@ -15,6 +15,8 @@ const MyCarousel = ({images}) => {
     const handlePreviousImage = () => {
         if(index !== 0) {
             setIndex(index - 1)
+        } else {
+            setIndex(images.length - 1)
         }
     }
 
