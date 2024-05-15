@@ -7,16 +7,18 @@ import Products from './components/Products.jsx'
 import Product from './components/Product.jsx'
 import Cart from './components/Cart.jsx'
 import Home from './components/Home.jsx'
+import Credits from './components/Credits.jsx'
 
 const router = createBrowserRouter([
   {
     path:"/",
     element: <App/>,
     children: [
-      {path:"home", element: <Home/>},
+      {path:"", element: <Home/>},
       {path:"products", element: <Products/>},
       {path:"products/:id", element: <Product/>},
-      {path:"cart", element: <Cart/>}
+      {path:"cart", element: <Cart/>},
+      {path:"credits", element: <Credits/>}
     ]
   }
 ])
