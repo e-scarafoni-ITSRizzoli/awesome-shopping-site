@@ -38,7 +38,7 @@ const Cart = () => {
         return subtotal.toFixed(2)
     }
 
-    if(cart.length === 0) return <h2> Your cart is empty! </h2>
+    if(cart.length === 0) return <h2 className="emptyCart"> Your cart is empty! </h2>
 
     return(
         <>

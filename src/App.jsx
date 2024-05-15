@@ -22,7 +22,7 @@ function App() {
       {!menu ? (
                 <>
                   <nav>
-                    <h3>Awesome Website</h3>
+                    <h3>Awesome Shop</h3>
                     <Link to="/home" className='link'> Homepage</Link>
                     <Link to="/products" className='link'> Products</Link>
                     <div className='link cartLink'>
