@@ -70,7 +70,7 @@ const Product = () => {
                 </div>
                 <div className="productAddCart">
                     <h3>Price: {product.price}€</h3>
-                    <label for="qtySetter">Quantity:</label>
+                    <label htmlFor="qtySetter">Quantity:</label>
                     <input type="number" name="qtySetter" id="qtySetter" min="1" step="1" value={quantity} onChange={() => handleChange(event)}></input>
                     <button onClick={addToCart}> Add to Cart </button>
                 </div>

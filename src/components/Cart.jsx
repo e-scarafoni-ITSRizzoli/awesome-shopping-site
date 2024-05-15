@@ -30,6 +30,11 @@ const Cart = () => {
         setCart(newCart)
     }
 
+    const handleDelete = (id) => {
+        let newCart = cart.filter(p => p.id !== id)
+        setCart(newCart)
+    }
+
     const calcTotal = () => {
         let subtotal = 0;
         cart.map(prod => {
@@ -48,7 +53,7 @@ const Cart = () => {
                 {cart.map(element => {
                     return (
                         <div key={element.id}>
-                            <CartCard image={element.image} title={element.title} quantity={element.quantity} price={element.price} increaseHandler={() => handleIncrease(element.id)} decreaseHandler={() => handleDecrease(element.id)}/>
+                            <CartCard image={element.image} title={element.title} quantity={element.quantity} price={element.price} increaseHandler={() => handleIncrease(element.id)} decreaseHandler={() => handleDecrease(element.id)} deleteHandler={() => handleDelete(element.id)}/>
                         </div>
                 
                     )

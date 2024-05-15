@@ -1,4 +1,4 @@
-const CartCard = ({image, title, quantity, price, increaseHandler, decreaseHandler}) => {
+const CartCard = ({image, title, quantity, price, increaseHandler, decreaseHandler, deleteHandler}) => {
 
     return(
         <div className="cartCard">
@@ -12,7 +12,7 @@ const CartCard = ({image, title, quantity, price, increaseHandler, decreaseHandl
                 <div className="buttons">
                     <button onClick={increaseHandler} className="increase"> +1 </button>
                     <button onClick={decreaseHandler} className="decrease"> -1 </button>
-                    <button className="delete"> 
+                    <button onClick={deleteHandler} className="delete"> 
                         <img src="/src/assets/trash-can-solid.svg" alt="delete"></img>
                         Remove
                   </button>
